@@ -31,3 +31,12 @@ if [ "$1" == "--help" -o "$1" == "-h" ]; then
   echo "                Jeśli podano argument, tworzy odpowiednią liczbę plików logx.txt"
   echo "  --help, -h    Wyświetla tę pomoc"
 fi
+
+if [[ "$1" = "--init" ]]; then
+        git clone https://github.com/MateuszKlosowski48744/lab4
+        echo "export PATH="$PATH:$(pwd)/twoj-repozytorium"" >> ~/.bashrc
+        source ~/.bashrc
+
+        echo "Repozytorium sklonowane i ścieżka dodana do PATH"
+
+fi
