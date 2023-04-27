@@ -24,4 +24,21 @@ else
   echo "Nieprawidłowa flaga lub brak argumentu liczby plików. Użyj --logs [liczba], aby utworzyć określoną liczbę plików logów lub --logs, aby utworzyć 100 plików."
 fi
 
+if [ "$1" == "--help" -o "$1" == "-h" ]; then
+  echo "Dostępne opcje:"
+  echo "  --date, -d    Wyświetla dzisiejszą datę"
+  echo "  --logs, -l    Tworzy automatycznie 100 plików logx.txt z nazwami i datami utworzenia"
+  echo "                Jeśli podano argument, tworzy odpowiednią liczbę plików logx.txt"
+  echo "  --help, -h    Wyświetla tę pomoc"
+fi
 
+
+
+if [[ "$1" = "--init" ]]; then
+        git clone https://github.com/MateuszKlosowski48744/lab4
+        echo "export PATH="$PATH:$(pwd)/twoj-repozytorium"" >> ~/.bashrc
+        source ~/.bashrc
+
+        echo "Repozytorium sklonowane i ścieżka dodana do PATH"
+
+fi
